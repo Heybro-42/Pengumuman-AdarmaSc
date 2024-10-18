@@ -1,0 +1,111 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+.container {
+    margin: 0 auto;
+    width: 80%;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+select {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #bdc3c7;
+    margin: 15px 0;
+}
+
+.candidate-list {
+    display: none;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+.candidate-list.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.candidate {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.candidate:hover {
+    background-color: #bdc3c7;
+}
+
+/* Animasi khusus untuk setiap divisi */
+
+/* Animasi untuk divisi Pengabdian */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animasi untuk divisi Perhubungan */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animasi untuk divisi Media dan Komunikasi */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Pengabdian - Slide In dari kiri */
+#pengabdianList.active {
+    animation: slideInLeft 0.5s ease-out forwards;
+}
+
+/* Perhubungan - Fade In */
+#perhubunganList.active {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Media dan Komunikasi - Zoom In */
+#mediaList.active {
+    animation: zoomIn 0.7s ease-out forwards;
+}

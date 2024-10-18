@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengumuman Kandidat Terpilih</title>
+    <!-- Hubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pengumuman Kandidat Terpilih</h1>
+        <p>Pilih divisi untuk melihat kandidat yang terpilih:</p>
+        
+        <!-- Dropdown untuk memilih divisi -->
+        <select id="divisionSelect" onchange="selectDivision()">
+            <option value="">-- Pilih Divisi --</option>
+            <option value="pengabdian">Divisi Pengabdian</option>
+            <option value="perhubungan">Divisi Perhubungan</option>
+            <option value="media">Divisi Media dan Komunikasi</option>
+        </select>
+
+        <!-- Daftar Kandidat untuk Divisi Pengabdian -->
+        <div class="candidate-list" id="pengabdianList">
+            <h3>Kandidat Terpilih untuk Divisi Pengabdian</h3>
+            <div class="candidate">1. Alya Yoeriza Fitri</div>
+            <div class="candidate">2. Daffa Farizqi Rabbani</div>
+            <div class="candidate">3. Erikka Nasya Dilla</div>
+            <div class="candidate">4. Farrel Ananda Wibowo</div>
+            <div class="candidate">5. Maharani Hafizhah</div>
+            <div class="candidate">6. Nuraini Whidi Astuti</div>
+            <div class="candidate">7. Oelima Tertia Fawwaz</div>
+            <div class="candidate">8. Rachel Adellia</div>
+        </div>
+
+        <!-- Daftar Kandidat untuk Divisi Perhubungan -->
+        <div class="candidate-list" id="perhubunganList">
+            <h3>Kandidat Terpilih untuk Divisi Perhubungan</h3>
+            <div class="candidate">1. Ahmad Dimas</div>
+            <div class="candidate">2. Ayu Nuraini</div>
+            <div class="candidate">3. Moh Mohan Mahendra</div>
+            <div class="candidate">4. Nur Sabila</div>
+            <div class="candidate">5. Sayyidati Salsabila Maimuna</div>
+        </div>
+
+        <!-- Daftar Kandidat untuk Divisi Media dan Komunikasi -->
+        <div class="candidate-list" id="mediaList">
+            <h3>Kandidat Terpilih untuk Divisi Media dan Komunikasi</h3>
+            <div class="candidate">1. Adellia Rahmasista</div>
+            <div class="candidate">2. Ashya Syaqina Azzahra Maharani</div>
+            <div class="candidate">3. Ghanim Putrinanda</div>
+            <div class="candidate">4. Prudent Shakil Febrianti</div>
+            <div class="candidate">5. Siti Khanza Nailah</div>
+        </div>
+    </div>
+
+    <!-- Hubungkan file JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
